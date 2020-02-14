@@ -16,7 +16,7 @@ socketio.on("connection", (userSocket) => {
     })
 
     userSocket.on("stop_typing", (data) => {
-        userSocket.broadcast.emit("stop_tying", data)
+        userSocket.broadcast.emit("stop_typing", data)
     })
 })
 
