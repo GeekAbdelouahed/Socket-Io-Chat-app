@@ -9,6 +9,7 @@ app.get('/', (req, res) => {
 socketio.on("connection", (userSocket) => {
     userSocket.on("send_message", (data) => {
         userSocket.broadcast.emit("receive_message", data)
+            userSocket.broadcast.emit("send_message", data)
     })
 
     userSocket.on("typing", (data) => {
@@ -18,6 +19,7 @@ socketio.on("connection", (userSocket) => {
     userSocket.on("stop_typing", (data) => {
         userSocket.broadcast.emit("stop_typing", data)
     })
+    
 })
 
 http.listen(process.env.PORT)
