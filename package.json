@@ -9,7 +9,7 @@
   "author": "Abdelouahde Medjoudja",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "socket.io": "^2.4.0"
   },
   "devDependencies": {
